@@ -575,6 +575,7 @@ nng_dialer_create(nng_dialer *dp, nng_socket sid, const char *addr)
 	did.id = nni_dialer_id(d);
 	*dp    = did;
 	nni_dialer_rele(d);
+	nni_sock_rele(s);
 	return (0);
 }
 
